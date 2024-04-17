@@ -1,9 +1,10 @@
+
 import RemoveBtn from "./RemoveBtn";
 
 const getTitle = async () => {
-  
+  const apiUrl = process.env.NEXTAPI_URL
   try {
-    const res = await fetch(process.env.NEXTAPI_URL+"/api/todos", {
+    const res = await fetch(`${apiUrl}/api/todos`, {
       cache: "no-store",
     });
     if (!res.ok) {
