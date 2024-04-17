@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Additem from "@/components/Additem";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,6 +15,8 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl text-center mt-5 font-bold ">To-Do List mongoDB</h1>
+        <Additem />
+
         {children}
         </div>
         </body>
