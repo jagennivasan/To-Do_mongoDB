@@ -13,7 +13,7 @@ export default function Additem() {
       alert("title is required");
     }
     try {
-      const res = await fetch(process.env.NEXTAPI_URL+"/api/todos", {
+      const res = await fetch("/api/todos", {
         method: "POST",
         headers: {
           "content-type": "application/json",
