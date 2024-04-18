@@ -18,16 +18,16 @@ const getTitle = async () => {
 export default async function ToDoItem() {
   const { titles } = await getTitle();
   return (
-    <div>
-      {titles.map((t,index)=>(
+    <>
+      {titles.map((t)=>(
           
-        <div key={index} className="mt-5 p-5 border border-gray-500 flex justify-between items-center rounded-lg">
+        <div className="mt-5 p-5 border border-gray-500 flex justify-between items-center rounded-lg">
           <div>{t.title}</div>
           <div>
             <RemoveBtn id={t._id} />
           </div>
         </div>
       ))}
-</div>
+</>
   );
 }
