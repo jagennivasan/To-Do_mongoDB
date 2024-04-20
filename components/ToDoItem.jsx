@@ -21,7 +21,9 @@ export default async function ToDoItem() {
     <>
       {titles.map((t)=>(
           
-        <div className="mt-5 p-5 border border-gray-500 flex justify-between items-center rounded-lg">
+        <div
+          key={t._id}
+          className="mt-5 p-5 border border-gray-500 flex justify-between items-center rounded-lg">
           <div>{t.title}</div>
           <div>
             <RemoveBtn id={t._id} />
